@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="top" >
+      <h1 style=" text-align: center; margin-top:13vh;">Your earnings</h1>
+    </div>
+    <div class="center box">
+      <span class="balancebox">Your balance: {{balance}} AMR</span><br>
+    </div >
+    <div class="center box">
+      <span class="text">Your earnings overtime:</span>
+      <!--  EARNINGS GRAPHS-->
+    </div>
+    <div id="plans" class=" box" style="width: 80vw; margin:auto;">
+      <md-list>
+        <md-list-item class="planopt">
+            <span style="display:inline-block;">Today</span>
+            <span style="display:inline-block; text-align:right;">{{dayearn}}</span>
+        </md-list-item>
+      </md-list>
+      <md-list>
+        <md-list-item class="planopt">
+            <span>This week</span>
+            <span style="display:inline-block; text-align:right;">{{weekearn}}</span>
+        </md-list-item>
+      </md-list>
+      <md-list>
+        <md-list-item class="planopt">
+            <span>This month</span>
+            <span style="display:inline-block; text-align:right;">{{monthearn}}</span>
+        </md-list-item>
+      </md-list>
+  </div>
+
+  <div id="bar" class="phone-viewport">
+    <md-bottom-bar md-sync-route>
+      <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
+      <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="INTERNET ACCESS" md-icon="wifi"></md-bottom-bar-item>
+      <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+    </md-bottom-bar>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-material@beta"></script>
+<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

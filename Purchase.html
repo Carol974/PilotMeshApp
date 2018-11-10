@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="app">
+
+
+    <div class="top" >
+      <h1 style=" text-align: center;">Hi {{name}}</h1>
+    </div>
+    <div class="center box">
+      <span class="balancebox">Your balance: {{balance}} AMR</span><br>
+    </div>
+    <span class="expl" style= "padding-bottom:3vh;">Select the amount of data plan that suits you best</span>
+
+    <div id="plans" class=" box" style="width: 80vw; margin:auto;">
+      <md-list>
+
+        <md-list-item class="planopt">
+          <md-radio v-model="radio" value="opt1" class="md-primary">
+          <div class="md-list-item-text">
+            <span>100 MB</span>
+            <span>Approximately 1 hour of internet access</span>
+          </div>
+          <md-button class="md-icon-button md-list-action">
+          <md-icon class="md-primary">star</md-icon>
+        </md-button>
+        </md-list-item>
+
+        <md-list-item class="planopt">
+          <md-radio v-model="radio" value="opt2" class="md-primary">
+          <div  class="md-list-item-text">
+            <span>200 MB</span>
+            <span>Approximately 2 hours of internet access</span>
+          </div>
+          <span>20 AMR</span>
+        </md-list-item>
+
+        <md-list-item class="planopt">
+          <md-radio v-model="radio" value="opt3" class="md-primary">
+          <div  class="md-list-item-text">
+            <span>500 MB</span>
+            <span>Approximately 5 hours of internet access</span>
+          </div>
+          <span>50 AMR</span>
+        </md-list-item>
+
+        <md-list-item class="planopt">
+          <md-radio v-model="radio" value="opt4" class="md-primary"/>
+          <div  class="md-list-item-text">
+            <span>750 MB</span>
+            <span>Approximately 7.5 hours of internet access</span>
+          </div>
+          <span>750 AMR</span>
+        </md-list-item>
+      </md-list>
+
+      <!-- <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">100 MB<br><small>(Approximately 1 hour of internet access)</small></md-radio>
+      <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">200 MB<br><small>(Approximately 2 hours of internet access)</small></md-radio>
+      <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">500 MB<br><small>(Approximately 5 hours of internet access)</small></md-radio>
+      <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">750 MB<br><small>(Approximately 7 hours of internet access)</small></md-radio> -->
+
+    </div>
+    <span class="center">* Estimated time according to average data consumption</span>
+
+    <div  id="buttons" class="center box">
+      <md-button  class="md-primary md-raised " > Cancel  </md-button>
+      <md-button  class="md-accent md-raised " > Accept </md-button>
+    </div>
+
+    <div id="bar" class="phone-viewport">
+      <md-bottom-bar md-sync-route>
+        <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="INTERNET ACCESS" md-icon="wifi"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+      </md-bottom-bar>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-material@beta"></script>
+  <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>

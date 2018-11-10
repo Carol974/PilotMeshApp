@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="top" >
+      <md-avatar style="margin-top: 8vh; margin-bottom: 3vh; display: flex; justify-content: center;" id="avatar"  class="md-large">
+        <img  src="./files/logo.jpg" alt="Avatar">
+      </md-avatar>
+      <h1 style=" text-align: center;">Register</h1>
+    </div>
+
+    <div class="login">
+      <div id="form">
+        <md-field>
+          <label>Username</label>
+          <md-input v-model="name"></md-input>
+        </md-field>
+
+        <md-field>
+          <label>Email</label>
+          <md-input v-model="email"></md-input>
+        </md-field>
+
+        <md-field>
+          <label>Password</label>
+          <md-input v-model="password"></md-input>
+          <span class="md-helper-text">Forgot password</span>
+        </md-field>
+      </div>
+
+      <div>
+        <span class="expl" style= "padding-bottom:3vh;">Select one of the following</span>
+        <md-list id="plans">
+
+          <md-list-item>
+            <md-radio v-model="radio" value="usermode" class="md-primary">
+              <div class="md-list-item-text">
+                <span>I am a user</span>
+                <span>I want to access internet</span>
+              </div>
+            </md-list-item>
+
+            <md-list-item>
+              <md-radio v-model="radio" value="provmode"  class="md-primary">
+                <div class="md-list-item-text">
+                  <span>I am a provider</span>
+                <span>I want to provide internet access</span>
+              </div>
+              </md-list-item>
+            </div>
+          </div>
+          <div  id="buttons" class="center" style="margin-top:3vh;">
+            <md-button  class="md-primary md-raised " > Cancel  </md-button>
+
+            <md-button  class="md-accent md-raised " > Sign up </md-button>
+          </div>
+        </div>
+
+        <script src="https://unpkg.com/vue"></script>
+        <script src="https://unpkg.com/vue-material@beta"></script>
+        <script type="text/javascript" src="./script.js"></script>
+      </body>
+      </html>

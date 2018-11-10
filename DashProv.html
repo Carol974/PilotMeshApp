@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1,minimal-ui" name="viewport">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Material+Icons">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/vue-material.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/vue-material@beta/dist/theme/default-dark.css">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <div id="app">
+
+    <div class="top" >
+      <md-avatar style="margin-top: 8vh; margin-bottom: 3vh; display: flex; justify-content: center;" id="avatar"  class="md-large">
+        <img  src="./files/logo.jpg" alt="Avatar">
+      </md-avatar>
+      <h1 style=" text-align: center;">Hi {{name}}</h1>
+    </div>
+    <div class="center box">
+      <span class="balancebox">Your balance: {{balance}} AMR</span><br>
+    </div>
+    <span class="center">Find out more about Ammbr tokens (AMR)</span>
+    <div>
+      <md-tabs md-sync-route id="tabs"  style="width: 80vw;margin:auto;" class="box center" >
+        <md-tab id="tab-device1" md-label="Device 1" to="/components/tabs/device1">
+          <div>
+            <span class="center text" style="width:100%;">Set price for your service:</span>
+            <span class="center text" style="width:100%;">{{setprice}}</span>
+            <span class="center text" style="width:100%;">Your set price is {{difference}} {{status}} the average price for your area</span>
+            <div  id="buttons" class="center box" style="width:100%;">
+              <md-button  class="md-primary md-raised" style="margin: auto;"> Change set price  </md-button>
+            </div>
+          </div>
+
+          <div>
+            <span class="center text">Current total consumption of your service:</span>
+            <md-progress-bar id="consumptionbar" md-mode="buffer" :md-value="others" :md-buffer="you"></md-progress-bar>
+          </div>
+          <div>
+          </div>
+        </md-tab>
+        <md-tab id="tab-device2" md-label="Device 2" to="/components/tabs/device2">
+          <!-- // CONTENT -->
+        </md-tab>
+        <md-tab id="tab-device3" md-label="Device 3" to="/components/tabs/device3">
+          <!-- // CONTENT -->
+        </md-tab>
+      </md-tabs>
+    </div>
+  </div>
+
+  <div id="bar" class="phone-viewport">
+    <md-bottom-bar md-sync-route>
+      <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
+      <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="INTERNET ACCESS" md-icon="wifi"></md-bottom-bar-item>
+      <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+    </md-bottom-bar>
+  </div>
+
+</div>
+
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-material@beta"></script>
+<script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
