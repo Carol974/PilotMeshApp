@@ -8,21 +8,6 @@ var buttons = new Vue({
   }
 })
 
-var form = new Vue({
-  el: '#form',
-  name: 'TextFields',
-  data: () => ({
-    initial: 'Initial Value',
-    type: null,
-    withLabel: null,
-    inline: null,
-    number: null,
-    textarea: null,
-    autogrow: null,
-    disabled: null
-  })
-})
-
 var avatar = new Vue({
   el: '#avatar',
   name: 'Regular'
@@ -65,35 +50,10 @@ var consumptionbar = new Vue({
 })
 
 
-var tabs = new Vue({
-  el: '#tabs',
-  name: 'TabContent'
-})
-
-
-var plans = new Vue({
-  el: '#plans',
-  name: 'RegularRadio',
-  data: () => ({
-    radio: 'accent'
-  })
-})
-
-//
 var bar = new Vue({
   el: '#bar',
   name: 'BarRouter'
 })
-
-
-var switchset = new Vue({
-  el: '#switchset',
-   name: 'RegularSwitch',
-   data: () => ({
-     boolean: false,
-   })
- })
-
 // var layout = new Vue({
 //   el:'.md-layout'
 //   name: 'LayoutHorizontalColumns'

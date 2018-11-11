@@ -17,8 +17,8 @@
       <h1 style=" text-align: center; margin-top:13vh; margin-bottom:5vh;">Settings</h1>
     </div>
     <div class="center" >
-      <span style="display: inline;">User </span>
-      <md-switch id="switchsetu"  v-model="boolean"> Provider</md-switch>
+      <span style="display: inline;">Provider </span>
+      <md-switch id="switchsetp"  v-model="boolean"> User</md-switch>
     </div>
     <div id="plans" class=" box" style="width: 80vw; margin:auto;">
       <md-list>
@@ -31,15 +31,15 @@
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Add provider mode</span>
+            <span>Add user mode</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Set recurrent automatic payment</span>
+            <span>Change price of my service</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Request service in my area</span>
+            <span>Add device</span>
         </md-list-item>
 
         <md-list-item class="planopt">
@@ -47,7 +47,7 @@
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>How to acquire Ammbr Tokens</span>
+            <span>Cash in Ammbr Tokens</span>
         </md-list-item>
       </md-list>
       <!-- <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">100 MB<br><small>(Approximately 1 hour of internet access)</small></md-radio>
@@ -60,7 +60,8 @@
     <div id="bar" class="phone-viewport">
       <md-bottom-bar md-sync-route>
         <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="INTERNET ACCESS" md-icon="wifi"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="NETWORK" md-icon="share"></md-bottom-bar-item>
         <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
       </md-bottom-bar>
     </div>
@@ -69,6 +70,6 @@
 
   <script src="https://unpkg.com/vue"></script>
   <script src="https://unpkg.com/vue-material@beta"></script>
-  <script type="text/javascript" src="./scriptSU.js"></script>
+  <script type="text/javascript" src="./scriptSP.js"></script>
 </body>
 </html>
