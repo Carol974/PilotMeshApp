@@ -16,38 +16,36 @@
     <div class="top" >
       <h1 style=" text-align: center; margin-top:13vh; margin-bottom:5vh;">Settings</h1>
     </div>
-    <div class="center" >
-      <span style="display: inline;">User </span>
-      <md-switch id="switchsetu"  v-model="boolean"> Provider</md-switch>
+    <div class="center switch-dialog">
+      <span style="display: inline-block ;padding-right:2vw;">User </span>
+      <md-switch id="switchsetu"  v-model="boolean" style="display: inline-block;"></md-switch>
+      <span style="display: inline-block;">Provider </span>
     </div>
     <div id="plans" class=" box" style="width: 80vw; margin:auto;">
       <md-list>
         <md-list-item class="planopt">
-            <span>Change details</span>
+           <md-icon>edit</md-icon>
+            <span to="/purchase.html" class="md-list-item-text settingsitems">Edit details</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Change password</span>
+           <md-icon>autorenew</md-icon>
+            <span class="md-list-item-text settingsitems">Set recurrent automatic payment</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Add provider mode</span>
+           <md-icon>room_service</md-icon>
+            <span class="md-list-item-text settingsitems">Request service in my area</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Set recurrent automatic payment</span>
+           <md-icon>account_balance</md-icon>
+            <span class="md-list-item-text settingsitems">How to acquire Ammbr Tokens</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Request service in my area</span>
-        </md-list-item>
-
-        <md-list-item class="planopt">
-            <span>Help</span>
-        </md-list-item>
-
-        <md-list-item class="planopt">
-            <span>How to acquire Ammbr Tokens</span>
+           <md-icon>help</md-icon>
+            <span class="md-list-item-text settingsitems">Help</span>
         </md-list-item>
       </md-list>
       <!-- <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">100 MB<br><small>(Approximately 1 hour of internet access)</small></md-radio>
@@ -61,7 +59,7 @@
       <md-bottom-bar md-sync-route>
         <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
         <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="INTERNET ACCESS" md-icon="wifi"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings" class="md-active"></md-bottom-bar-item>
       </md-bottom-bar>
     </div>
 

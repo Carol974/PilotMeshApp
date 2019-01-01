@@ -1,6 +1,39 @@
+/*
+@import "~vue-material/dist/theme/engine"; // Import the theme engine
+
+@include md-register-theme("default", (
+  primary: #3fffbe, // The primary color of your brand
+  accent: #1a11e8 // The secondary color of your brand
+));
+
+@import "~vue-material/dist/theme/all"; // Apply the theme
+
+#FCA534
+*/
+
 
 h1{
   text-align: center;
+}
+
+a:link {
+    text-decoration: none;
+    color: #FCA534;
+}
+
+a:visited {
+    text-decoration: none;
+    color: yellow;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: yellow;
+}
+
+a:active {
+    text-decoration: underline;
+    color: yellow;
 }
 
 .text{
@@ -16,8 +49,14 @@ h1{
   padding-top:5vh;
 }
 
+.tokenprice{
+  color:#FCA534;
+  font-weight: bold;
+}
+
+
 .login{
-  width:50vw;
+  width:80vw;
   margin:auto;
 }
 
@@ -27,16 +66,16 @@ h1{
 }
 
 .card{
-  width:80%;
   margin:auto;
+
 }
 
 .balancebox{
-  border-radius: 10px;
+  border-radius: 5px;
   border: 3px solid #FCA534;
   display:inline-flex;
   font-size: 18px;
-  padding:1vw;
+  padding:3vw;
 }
 
 .box{
@@ -44,6 +83,7 @@ h1{
   padding-top:5vh;
   padding-bottom:2vh;
 }
+
 .md-radio {
     display: flex;
   }
@@ -52,6 +92,10 @@ h1{
     width: 80vw;
     display: flex;
   }
+
+.settingsitems{
+  margin:-3vw;
+}
 
 .planopt{
   width:100%;
@@ -65,10 +109,28 @@ h1{
     display: inline-flex;
     align-items: flex-end;
     overflow: hidden;
-    border: 1px solid rgba(#000, .26);
-    background: rgba(#000, .06);
+    background: rgba(#000, 1);
+    position:fixed;
+   left:0px;
+   bottom:0px;
+    z-index: 5;
   }
 
   .md-switch {
     display: flex;
+  }
+
+.switch-dialog{
+  display:inline;
+   position: absolute;
+    left: 50%;
+     transform: translate(-50%, -50%);
+}
+  .approx{
+    margin-left: -5vw;
+  }
+
+  .planopt:hover,  .planopt:active{
+    background-color: grey;
+    cursor: pointer;
   }

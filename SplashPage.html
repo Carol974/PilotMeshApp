@@ -20,6 +20,7 @@
     <span class="expl">Sign in to purchase internet access</span>
     <div class="login">
       <div id="form">
+
         <md-field>
           <label>Username</label>
           <md-input v-model="name"></md-input>
@@ -39,88 +40,76 @@
       </div>
     </div>
 
-<!-- //FLEX-WRAP -->
+    <!-- //FLEX-WRAP -->
     <div>
       <span class="expl" style= "padding-bottom:3vh;">Or browse through these free services</span>
-      <div class="md-layout">
-        <div class="md-layout-item">
-          <md-card id="services" class="card">
-            <md-card-area>
-              <md-card-media>
-                <img src="/assets/examples/card-image-1.jpg" alt="image">
-              </md-card-media>
+<div style="padding-bottom:5vh; margin:auto; width:80%;">
+      <md-card id="services" class="card">
+        <md-card-header>
+          <md-card-header-text>
+            <div class="md-title">Service</div>
+            <div class="md-subhead">Description</div>
+          </md-card-header-text>
 
-              <md-card-header>
-                <div class="md-title">Actions left aligned</div>
-                <div class="md-subhead">Subtitle here</div>
-              </md-card-header>
+          <md-card-media>
+            <img src="./files/logo.jpg" alt="Avatar">
+          </md-card-media>
+        </md-card-header>
 
-              <md-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-              </md-card-content>
-            </md-card-area>
+        <md-card-actions>
+          <md-button>Action</md-button>
+          <md-button>Action</md-button>
+        </md-card-actions>
+      </md-card>
+</div>
 
-            <md-card-actions md-alignment="left">
-              <md-button>Action</md-button>
-              <md-button>Action</md-button>
-            </md-card-actions>
-          </md-card>
-        </div>
+<div style="padding-bottom:5vh; width:40vw;">
+      <md-card id="services" class="card">
+        <md-card-header>
+          <md-card-header-text>
+            <div class="md-title">Service</div>
+            <div class="md-subhead">Description</div>
+          </md-card-header-text>
 
-        <div class="md-layout-item">
-          <md-card id="services2"  class="card">
-            <md-card-area>
-              <md-card-media>
-                <img src="/assets/examples/card-image-1.jpg" alt="image">
-              </md-card-media>
+          <md-card-media>
+            <img src="/assets/examples/avatar-2.jpg" alt="People">
+          </md-card-media>
+        </md-card-header>
 
-              <md-card-header>
-                <div class="md-title">Actions left aligned</div>
-                <div class="md-subhead">Subtitle here</div>
-              </md-card-header>
+        <md-card-actions>
+          <md-button>Action</md-button>
+          <md-button>Action</md-button>
+        </md-card-actions>
+      </md-card>
+</div>
 
-              <md-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-              </md-card-content>
-            </md-card-area>
+      <md-card id="services" class="card" >
+        <md-card-area>
+          <md-card-media>
+            <img src="/assets/examples/card-image-1.jpg" alt="image">
+          </md-card-media>
 
-            <md-card-actions md-alignment="left">
-              <md-button>Action</md-button>
-              <md-button>Action</md-button>
-            </md-card-actions>
-          </md-card>
+          <md-card-header>
+            <div class="md-title">Actions left aligned</div>
+            <div class="md-subhead">Subtitle here</div>
+          </md-card-header>
 
-        </div>
+          <md-card-content>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+          </md-card-content>
+        </md-card-area>
 
-        <div class="md-layout-item">
-          <md-card id="services" class="card" >
-            <md-card-area>
-              <md-card-media>
-                <img src="/assets/examples/card-image-1.jpg" alt="image">
-              </md-card-media>
+        <md-card-actions md-alignment="left">
+          <md-button>Action</md-button>
+          <md-button>Action</md-button>
+        </md-card-actions>
+      </md-card>
 
-              <md-card-header>
-                <div class="md-title">Actions left aligned</div>
-                <div class="md-subhead">Subtitle here</div>
-              </md-card-header>
-
-              <md-card-content>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
-              </md-card-content>
-            </md-card-area>
-
-            <md-card-actions md-alignment="left">
-              <md-button>Action</md-button>
-              <md-button>Action</md-button>
-            </md-card-actions>
-          </md-card>
-        </div>
-      </div>
     </div>
   </div>
 
-    <script src="https://unpkg.com/vue"></script>
-    <script src="https://unpkg.com/vue-material@beta"></script>
-    <script type="text/javascript" src="./scriptSplash.js"></script>
-  </body>
-  </html>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vue-material@beta"></script>
+  <script type="text/javascript" src="./scriptSplash.js"></script>
+</body>
+</html>

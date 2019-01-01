@@ -30,7 +30,7 @@ var avatar = new Vue({
 
 var services = new Vue({
   el: '#services',
-  name: 'Layouts',
+  name: 'MediaCover',
   methods: {
     sendMessage () {
       window.alert('Send a message...')

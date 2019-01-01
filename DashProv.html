@@ -12,7 +12,7 @@
 <body>
   <div id="app">
 
-    <div class="top" >
+    <div class="top" style=" width:100vw;">
       <md-avatar style="margin-top: 8vh; margin-bottom: 3vh; display: flex; justify-content: center;" id="avatar"  class="md-large">
         <img  src="./files/logo.jpg" alt="Avatar">
       </md-avatar>
@@ -21,44 +21,75 @@
     <div class="center box">
       <span class="balancebox">Your balance: {{balance}} AMR</span><br>
     </div>
-    <span class="center">Find out more about Ammbr tokens (AMR)</span>
-    <div>
-      <md-tabs md-sync-route id="tabs"  style="width: 80vw;margin:auto;" class="box center" >
-        <md-tab id="tab-device1" md-label="Device 1" to="/components/tabs/device1">
-          <div>
-            <span class="center text" style="width:100%;">Set price for your service:</span>
+
+    <!--<md-dialog id="tokendes"
+      :md-active.sync="showDialog"
+      md-content="Description of Ammbr Tokens"
+      md-confirm-text="OK" />
+
+      <a class="center" @click="showDialog = true" style=" width:100vw; padding-bottom:5vh;">Find out more about Ammbr tokens (AMR)</a> -->
+      <a class="center" style=" width:100vw; padding-bottom:5vh;">Find out more about Ammbr tokens (AMR)</a>
+
+    <div style="width:100vw;padding-top: 100%; position: relative;">
+      <md-empty-state
+      id= "emptystate"
+      md-rounded
+      md-icon="settings_remote"
+      md-label="You do not currently have any devices set up"
+      style="width:100%; position:  absolute; top: 0; left: 0; bottom: 0; right: 0;"
+      >
+      <md-button id="buttons" class="md-primary md-raised md-icon-button " >
+        <md-icon class="md-primary">add</md-icon>
+      </md-button>
+    </md-empty-state>
+
+  </div>
+
+  <div style="padding-bottom:10vh; padding-top:0vh;" class="center box">
+    <md-tabs md-sync-route id="tabs"  style="width: 80vw;margin:auto;" class="box center" >
+      <md-tab id="tab-device1" md-label="Device 1" to="/components/tabs/device1">
+        <div>
+          <span class="center text" style="width:100%;">Current set price for your service:</span>
+
+          <md-field class="setprice">
+            <md-input type="number"v-model="price"/>
             <span class="center text" style="width:100%;">{{setprice}}</span>
-            <span class="center text" style="width:100%;">Your set price is {{difference}} {{status}} the average price for your area</span>
-            <div  id="buttons" class="center box" style="width:100%;">
-              <md-button  class="md-primary md-raised" style="margin: auto;"> Change set price  </md-button>
-            </div>
-          </div>
+            <span class="md-suffix">AMB</span>
+          </md-field>
 
-          <div>
-            <span class="center text">Current total consumption of your service:</span>
-            <md-progress-bar id="consumptionbar" md-mode="buffer" :md-value="others" :md-buffer="you"></md-progress-bar>
-          </div>
-          <div>
-          </div>
-        </md-tab>
-        <md-tab id="tab-device2" md-label="Device 2" to="/components/tabs/device2">
-          <!-- // CONTENT -->
-        </md-tab>
-        <md-tab id="tab-device3" md-label="Device 3" to="/components/tabs/device3">
-          <!-- // CONTENT -->
-        </md-tab>
-      </md-tabs>
-    </div>
-  </div>
 
-  <div id="bar" class="phone-viewport">
-    <md-bottom-bar md-sync-route>
-      <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
-      <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on"></md-bottom-bar-item>
-      <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="NETWORK" md-icon="share"></md-bottom-bar-item>
-      <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
-    </md-bottom-bar>
-  </div>
+
+          <span class="center text" style="width:100%;">Your set price is {{difference}} {{status}} the average price for your area</span>
+          <!-- <div  id="buttons" class="center box" style="width:100%;">
+          <md-button  class="md-primary md-raised" style="margin: auto;"> Change set price  </md-button>
+        </div> -->
+      </div>
+
+      <!-- <div>
+      <span class="center text">Current total consumption of your service:</span>
+      <md-progress-bar id="consumptionbar" md-mode="buffer" :md-value="others" :md-buffer="you"></md-progress-bar>
+    </div> -->
+  </md-tab>
+  <md-tab id="tab-device2" md-label="Device 2" to="/components/tabs/device2">
+
+
+
+  </md-tab>
+  <md-tab id="tab-device3" md-label="Device 3" to="/components/tabs/device3">
+    <!-- // CONTENT -->
+  </md-tab>
+</md-tabs>
+</div>
+</div>
+
+<div id="bar" class="phone-viewport">
+  <md-bottom-bar md-sync-route>
+    <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard" class="md-active"></md-bottom-bar-item>
+    <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on"></md-bottom-bar-item>
+    <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="NETWORK" md-icon="share"></md-bottom-bar-item>
+    <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+  </md-bottom-bar>
+</div>
 
 </div>
 

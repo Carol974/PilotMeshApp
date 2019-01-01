@@ -16,38 +16,37 @@
     <div class="top" >
       <h1 style=" text-align: center; margin-top:13vh; margin-bottom:5vh;">Settings</h1>
     </div>
-    <div class="center" >
-      <span style="display: inline;">Provider </span>
-      <md-switch id="switchsetp"  v-model="boolean"> User</md-switch>
+    <div class="center switch-dialog">
+      <span style="display: inline-block ;padding-right:2vw;">User </span>
+      <md-switch id="switchsetp"  v-model="boolean" style="display: inline-block;"></md-switch>
+      <span style="display: inline-block;">Provider </span>
     </div>
     <div id="plans" class=" box" style="width: 80vw; margin:auto;">
+
       <md-list>
         <md-list-item class="planopt">
-            <span>Change details</span>
+           <md-icon>edit</md-icon>
+            <span to="/purchase.html" class="md-list-item-text settingsitems">Edit details</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Change password</span>
+           <md-icon>money</md-icon>
+            <span class="md-list-item-text settingsitems">Change price of my service</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Add user mode</span>
+           <md-icon>add</md-icon>
+            <span class="md-list-item-text settingsitems">Add device</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Change price of my service</span>
+           <md-icon>attach_money</md-icon>
+            <span class="md-list-item-text settingsitems">Cash in Ammbr Tokens</span>
         </md-list-item>
 
         <md-list-item class="planopt">
-            <span>Add device</span>
-        </md-list-item>
-
-        <md-list-item class="planopt">
-            <span>Help</span>
-        </md-list-item>
-
-        <md-list-item class="planopt">
-            <span>Cash in Ammbr Tokens</span>
+           <md-icon>help</md-icon>
+            <span class="md-list-item-text settingsitems">Help</span>
         </md-list-item>
       </md-list>
       <!-- <md-radio v-model="radio" value="Primary" class="md-primary center" style="width: 100%; display: flex;">100 MB<br><small>(Approximately 1 hour of internet access)</small></md-radio>
@@ -62,7 +61,7 @@
         <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
         <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on"></md-bottom-bar-item>
         <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="NETWORK" md-icon="share"></md-bottom-bar-item>
-        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
+        <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings" class="md-active"></md-bottom-bar-item>
       </md-bottom-bar>
     </div>
 

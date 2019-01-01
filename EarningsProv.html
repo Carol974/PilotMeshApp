@@ -19,26 +19,33 @@
       <span class="balancebox">Your balance: {{balance}} AMR</span><br>
     </div >
     <div class="center box">
-      <span class="text">Your earnings overtime:</span>
       <!--  EARNINGS GRAPHS-->
     </div>
     <div id="plans" class=" box" style="width: 80vw; margin:auto;">
       <md-list>
         <md-list-item class="planopt">
+          <div  class="md-list-item-text">
             <span style="display:inline-block;">Today</span>
-            <span style="display:inline-block; text-align:right;">{{dayearn}}</span>
+          </div>
+            <span class="tokenprice">{{dayearn}}</span>
         </md-list-item>
       </md-list>
+
       <md-list>
         <md-list-item class="planopt">
-            <span>This week</span>
-            <span style="display:inline-block; text-align:right;">{{weekearn}}</span>
+          <div  class="md-list-item-text">
+            <span style="display:inline-block;">This week</span>
+          </div>
+            <span  class="tokenprice">{{dayearn}}</span>
         </md-list-item>
       </md-list>
+
       <md-list>
         <md-list-item class="planopt">
-            <span>This month</span>
-            <span style="display:inline-block; text-align:right;">{{monthearn}}</span>
+          <div  class="md-list-item-text">
+            <span style="display:inline-block;">This month</span>
+          </div>
+            <span  class="tokenprice">{{dayearn}}</span>
         </md-list-item>
       </md-list>
   </div>
@@ -46,7 +53,7 @@
   <div id="bar" class="phone-viewport">
     <md-bottom-bar md-sync-route>
       <md-bottom-bar-item to="/components/bottom-bar/home" md-label="OVERVIEW" md-icon="dashboard"></md-bottom-bar-item>
-      <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on"></md-bottom-bar-item>
+      <md-bottom-bar-item to="/components/bottom-bar/posts" md-label="EARNINGS" md-icon="monetization_on" class="md-active"></md-bottom-bar-item>
       <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="NETWORK" md-icon="share"></md-bottom-bar-item>
       <md-bottom-bar-item to="/components/bottom-bar/favorites" md-label="SETTINGS" md-icon="settings"></md-bottom-bar-item>
     </md-bottom-bar>
@@ -55,6 +62,7 @@
 </div>
 
 <script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vue-router@2.0.0/dist/vue-router.js"></script>
 <script src="https://unpkg.com/vue-material@beta"></script>
 <script type="text/javascript" src="./scriptEP.js"></script>
 </body>

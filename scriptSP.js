@@ -28,6 +28,6 @@ var switchsetp = new Vue({
   el: '#switchsetp',
    name: 'RegularSwitch',
    data: () => ({
-     boolean: false,
+     boolean: true,
    })
  })

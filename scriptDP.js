@@ -19,7 +19,7 @@ var consumptionbar = new Vue({
   data: () => ({
     others: 25,
     you: 40
-})
+  })
 })
 
 var tabs = new Vue({
@@ -27,9 +27,21 @@ var tabs = new Vue({
   name: 'TabContent'
 })
 
+var tokendes = new Vue({
+  el: '#tokendes',
+  name: 'DialogCustom',
+    data: () => ({
+      showDialog: false
+    })
+  })
 
-//
+
 var bar = new Vue({
   el: '#bar',
   name: 'BarRouter'
+})
+
+var emptystate = new Vue({
+  el: '#emptystate',
+  name: 'EmptyStateBasic'
 })
